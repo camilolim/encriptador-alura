@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Encriptador Alura</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="logo">
+                    <img src="images/Logo.png">
+    </header>
+    <main>
+        <section class="entrada">
+            <div class="entrada-texto">
+                <textarea
+                    id="textOrigen"
+                    autofocus="on"
+                    autocomplete="off"
+                    placeholder="Ingresa un texto para codificar"
+                    spellcheck="false"></textarea>
+                <div class="entrada-advertencia">
+                    <img src="images/exclamacion.png">
+                    <p class="entrada-condicion">
+                        Solo letras minúsculas y sin acentos
+                    </p>
+                </div>
+            </div>
+            <div class="entrada-botones">
+                <button
+                    class="codificar btn"
+                    onclick="btnEncriptar()">CODIFICAR
+                </button>
+                <button
+                    class="decodificar btn"
+                    onclick="btnDesencriptar()">
+                    DECODIFICAR
+                </button>
+            </div>
+        </section>
+        <section class="salida">
+            <div class="salida-mensaje">
+                <img class="salida-dibujo"
+                    alt="niño con lupa"
+                    src="images/dibujo.png"
+                    width="200px">
+                <h1 class="m-titulo">Ningún mensaje fue encontrado</h1>
+                <p class="m-parrafo">Ingrese el texto que desee escriptar o desencriptar</p>
+            </div>
+            <div class="salida-codificado">
+                <div class="codificado-texto" disabled>    
+                    <textarea class="textSalida" readonly discabled></textarea>
+                </div>    
+                <div class="codificado-copiar">
+                    <button class="copiar btn"
+                        onclick="btncopiar()">
+                        COPIAR                        
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

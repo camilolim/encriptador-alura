@@ -1,0 +1,138 @@
+body{
+    background: #f3f5fc;
+    font-family: "Inter", sans-serif;
+    width: 100vw;
+    height: 100vh;
+    }
+    .logo {
+        padding: 30px 0 10px;
+    }
+    main{                   /*contenedor de cajon izquierdo y derecho*/
+        display: flex;      /*Disposición en columnas envueltas*/
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        height: 80%;        /*Cubre el 80% de la pantalla*/
+        padding-left: 10%;
+    }
+        .entrada {
+            flex: 0 1 55%;  /*el contenedor izquiedo*/
+            display: flex;  /*Disposición en dos filas*/
+            flex-flow: column;
+            justify-content: space-between; /*Cada bloque en los extremos superior e inferior*/
+        }
+            .entrada-texto{         /*contenedor de textarea y mensaje de advertencia*/
+               flex-basis: 80%;     /*cubre el 80% contenedos izquiedo*/
+                display: flex;      /*Dividido en dos filas*/
+                flex-direction: column;
+                justify-content: space-between;
+            }
+                textarea{       /*area para ingresar datos por usuario*/
+                    outline: none; /*Desactiva el borde de selección*/
+                    border:none;    /*Desactiva el borde de textarea*/
+                    width: 100%;    /*Tan ancho como el contenedor*/
+                    height: 90%;
+                    resize: none;
+                    font-family: "Inter", sans-serif;
+                    font-size: 32px;
+                    color: #0A3871;
+                }
+                .entrada-advertencia{   /*contenedor de advertencia*/
+                    display: flex;
+                    gap: 5px;
+                    align-items: center;
+                    opacity: 80%;
+                    font-size: 12px;
+                }
+
+            .entrada-botones{ /*Botones contenedor izquierdo*/
+                flex-basis: 10%;
+                display: flex;
+                justify-content: space-between;
+                gap: 25px;
+                padding-bottom: 20px;
+            }
+                .btn{   /*parametros generales de todos los botones*/
+                    cursor: pointer;
+                    outline: none;
+                    border-width: 0;
+                    border-radius: 24px;
+                    box-shadow: 10px 15px 0px -8px #00000014;
+                    
+                }
+                .codificar{ 
+                    flex-grow: 1; /*tamaño y distribución botón encriptar*/
+                    background-color: #0A3871;
+                    color: whitesmoke;
+                }
+                .decodificar{
+                    flex-grow: 1; /*tamaño y distribución botón desencriptar*/
+                    color: #0A3871;
+                }
+                
+        .salida{ /*Contenedor derecho con dos contenedores que se interpolan en oculto y visible*/
+            flex: 0 1 35%; /* Tamaño del contenedor derecho*/
+            height: 100%;
+            border: 1px solid;
+            border-radius: 32px;
+            background: white;
+            box-shadow: 0px 24px 32px -8px #00000014; 
+        }
+            .salida-mensaje {   /*contendor con mensaje inicial visible*/
+                height: 100%;   /*contenedor con img, titulo y parrafo*/
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                
+            }
+
+                .m-titulo{
+                    text-align: center;
+                    margin: 0 15px;
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: #0A3871;
+                }
+
+                .m-parrafo{
+                    text-align: center;
+                    font-size: 16px;
+                    color: #495057;
+                }
+         
+            .salida-codificado{ /*contenedor con dos contenedores mensaje y botón*/
+                height: 100%;   
+                display: none;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+                .codificado-texto{ /*contenedor para textarea*/
+                    width: 100%;
+                    flex-basis: 80%;
+                    }
+                    .textSalida{ /*textarea con texto encriptado o desencriptado*/
+                        border: none;
+                        outline: none;
+                        background-color: #00000000;
+                        width: 90%;
+                        height: 90%; 
+                        padding: 20px;
+                        font-size: 20px;
+                    }
+                .codificado-copiar{
+                    width: 80%;
+                    flex-basis: 10%;
+                    display: flex;
+                    justify-content: center;
+                    padding-bottom: 20px; 
+
+                    
+                
+                }
+
+                    .copiar{
+                        width: 100%;
+                    }
